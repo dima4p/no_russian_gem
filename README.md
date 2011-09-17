@@ -4,16 +4,20 @@ Farewell, gem russian!
 Совершенно понятно, почему Ярослав перестал его подерживать.
 После `I18n v.0.3.0`, когда появлился модуль Pluralization в этом джеме отпала необходимость.
 
-Этот маленький проект содержит всего три файла, которые достаточно добавить в рельсовый проект, чтобы получпть полноценнвую поддрежку русского языка.
+Этот маленький проект содержит всего три файла, которые достаточно добавить в рельсовый проект, чтобы получить полноценную поддрежку русского языка, в том числе и транслитерацию:
 
-If you do not read Russian, here is the explenation.
+1. `app/config/initializers/locale.rb` — добавляет модуль Pluralization;
+2. `app/config/locales/ru.rb` — правила плюрализации для русского языка и хэши для транслитерации; можно добавлять свои [правила](http://unicode.org/repos/cldr-tmp/trunk/diff/supplemental/language_plural_rules.html)
+3. `app/config/locales/ru.yml` — стандартный файл с переводом; приведены значения по-умолчанию для русского языка.
 
-After the version 0.3.0 of the gem I18n has appeared the full pluralization support is implemented for every language.
 
-For use of this possibility you need to add to your project the following files.
+If you do not read Russian, here is the explanation
+---------------------------------------------------
 
-1. config/initializers/locale.rb that adds the module Pluralization;
-2. the pluralizarion rules, here there is the file config/locales/ru.rb
-for Russian languages; yuo can easyly add the rules for other languages
-just looking at http://unicode.org/repos/cldr-tmp/trunk/diff/supplemental/language_plural_rules.html;
-3. the standard rails translations; here are ones for Russian language in the file config/locales/ru.yml that I recoomend to rename and keep unchaged.
+With the `I18n v0.3.0+`, full pluralization support made possible for every language.
+
+To use this possibility you need to add the following three files to your project:
+
+1. `app/config/initializers/locale.rb` — adds the Pluralization module;
+2. `app/config/locales/ru.rb` — pluralization rules and transliteration hashes for Russian; you can easily add your own rules for other languages (look [here](http://unicode.org/repos/cldr-tmp/trunk/diff/supplemental/language_plural_rules.html) for more examples)
+3. `app/config/locales/ru.yml` — standard rails translations; these are the defaults for Russian language, that I recommend to rename and keep unchanged.

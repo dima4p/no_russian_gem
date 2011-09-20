@@ -109,7 +109,7 @@ ru:
         many:  "%{count} дней"
         other: "%{count} дня"
       x_minutes:
-        one:   "%{count} минуту"
+        one:   "%{count} минута"
         few:   "%{count} минуты"
         many:  "%{count} минут"
         other: "%{count} минуты"

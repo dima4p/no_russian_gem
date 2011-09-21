@@ -11,6 +11,13 @@ ru:
           many:  "Возникло %{errors} ошибок"
           other: "Возникло %{errors} ошибки"
         taken: "уже существует"
+  time: 
+    am: "утра"
+    formats: 
+      default: "%a, %d %b %Y, %H:%M:%S %z"
+      long: "%d %B %Y, %H:%M"
+      short: "%d %b, %H:%M"
+    pm: "вечера"
   date: 
     abbr_day_names: 
       - вс
@@ -64,72 +71,73 @@ ru:
       - :day
       - :month
       - :year
-
+  # Used in distance_of_time_in_words(),
+  # distance_of_time_in_words_to_now(), time_ago_in_words()
   datetime: 
     distance_in_words: 
-      about_x_hours:
-        one:   "около %{count} часа"
-        few:   "около %{count} часов"
-        many:  "около %{count} часов"
-        other: "около %{count} часа"
-      about_x_months:
-        one:   "около %{count} месяца"
-        few:   "около %{count} месяцев"
-        many:  "около %{count} месяцев"
-        other: "около %{count} месяца"
-      about_x_years:
-        one:   "около %{count} года"
-        few:   "около %{count} лет"
-        many:  "около %{count} лет"
-        other: "около %{count} лет"
-      almost_x_years:
-        one:   "почти %{count} год"
-        few:   "почти %{count} года"
-        many:  "почти %{count} лет"
-        other: "почти %{count} лет"
-      half_a_minute: "меньше минуты"
-      less_than_x_minutes:
-        one:   "меньше %{count} минуты"
-        few:   "меньше %{count} минут"
-        many:  "меньше %{count} минут"
-        other: "меньше %{count} минуты"
+      half_a_minute: "пол-минуты"
       less_than_x_seconds:
         one:   "меньше %{count} секунды"
         few:   "меньше %{count} секунд"
         many:  "меньше %{count} секунд"
         other: "меньше %{count} секунды"
-      over_x_years:
-        one:   "больше %{count} года"
-        few:   "больше %{count} лет"
-        many:  "больше %{count} лет"
-        other: "больше %{count} лет"
-      x_days:
-        one:   "%{count} день"
-        few:   "%{count} дня"
-        many:  "%{count} дней"
-        other: "%{count} дня"
-      x_minutes:
-        one:   "%{count} минуту"
-        few:   "%{count} минуты"
-        many:  "%{count} минут"
-        other: "%{count} минуты"
-      x_months:
-        one:   "%{count} месяц"
-        few:   "%{count} месяца"
-        many:  "%{count} месяцев"
-        other: "%{count} месяца"
       x_seconds:
         one:   "%{count} секунда"
         few:   "%{count} секунды"
         many:  "%{count} секунд"
         other: "%{count} секунды"
+      less_than_x_minutes:
+        one:   "меньше %{count} минуты"
+        few:   "меньше %{count} минут"
+        many:  "меньше %{count} минут"
+        other: "меньше %{count} минуты"
+      x_minutes:
+        one:   "%{count} минута"
+        few:   "%{count} минуты"
+        many:  "%{count} минут"
+        other: "%{count} минуты"
+      about_x_hours:
+        one:   "около %{count} часа"
+        few:   "около %{count} часов"
+        many:  "около %{count} часов"
+        other: "около %{count} часа"
+      x_days:
+        one:   "%{count} день"
+        few:   "%{count} дня"
+        many:  "%{count} дней"
+        other: "%{count} дня"
+      about_x_months:
+        one:   "около %{count} месяца"
+        few:   "около %{count} месяцев"
+        many:  "около %{count} месяцев"
+        other: "около %{count} месяца"
+      x_months:
+        one:   "%{count} месяц"
+        few:   "%{count} месяца"
+        many:  "%{count} месяцев"
+        other: "%{count} месяца"
+      about_x_years:
+        one:   "около %{count} года"
+        few:   "около %{count} лет"
+        many:  "около %{count} лет"
+        other: "около %{count} лет"
+      over_x_years:
+        one:   "больше %{count} года"
+        few:   "больше %{count} лет"
+        many:  "больше %{count} лет"
+        other: "больше %{count} лет"
+      almost_x_years:
+        one:   "почти %{count} год"
+        few:   "почти %{count} года"
+        many:  "почти %{count} лет"
+        other: "почти %{count} лет"
     prompts: 
+      year: Год
+      month: Месяц
       day: День
       hour: Часов
       minute: Минут
-      month: Месяц
       second: Секунд
-      year: Год
   errors: 
     format: "Поле %{attribute} %{message}"
     messages: 
@@ -138,7 +146,7 @@ ru:
       confirmation: "не совпадает с подтверждением"
       empty: "не может быть пустым"
       equal_to: "может иметь лишь значение, равное %{count}"
-      even: "может иметь лишь четное значение"
+      even: "может иметь лишь чётное значение"
       exclusion: "имеет зарезервированное значение  "
       greater_than: "может иметь лишь значение большее %{count}"
       greater_than_or_equal_to: "может иметь лишь значение большее или равное %{count}"
@@ -148,7 +156,7 @@ ru:
       less_than_or_equal_to: "может иметь значение меньшее или равное %{count}"
       not_a_number: "не является числом"
       not_an_integer: "должен быть целым"
-      odd: "может иметь лишь нечетное значение"
+      odd: "может иметь лишь нечётное значение"
       too_long:
         one:   "слишком большой длины (допускается максимум %{count} символ)"
         few:   "слишком большой длины (допускается максимум %{count} символа)"
@@ -232,10 +240,3 @@ ru:
       last_word_connector: " и "
       two_words_connector: " и "
       words_connector: ", "
-  time: 
-    am: "утра"
-    formats: 
-      default: "%a, %d %b %Y, %H:%M:%S %z"
-      long: "%d %B %Y, %H:%M"
-      short: "%d %b, %H:%M"
-    pm: "вечера"

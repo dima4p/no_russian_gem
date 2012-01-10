@@ -5,11 +5,7 @@ ru:
   activerecord: 
     errors: 
       messages: 
-        record_invalid: 
-          one:   "Возникла %{errors} ошибка"
-          few:   "Возникло %{errors} ошибки"
-          many:  "Возникло %{errors} ошибок"
-          other: "Возникло %{errors} ошибки"
+        record_invalid: "Возникли ошибки: %{errors}"
         taken: "уже существует"
   date: 
     abbr_day_names: 
